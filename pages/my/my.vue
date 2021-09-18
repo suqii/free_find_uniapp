@@ -12,7 +12,7 @@
 		</template>
 
 		<!-- 已登录 -->
-		<view v-else class="flex align-center p-2" hover-class="bg-light">
+		<view v-else class="flex align-center p-2" hover-class="bg-light" @tap="openSpace(user.id)">
 			<image :src="avatar"
 			style="width: 100rpx;height: 100rpx;"
 			class="rounded-circle"></image>
@@ -116,6 +116,13 @@
 			}
 		},
 		methods: {
+      // 打开个人空间
+			openSpace(user_id) {
+        console.log("个人空间")
+				uni.navigateTo({
+					url: '/pages/user-space/user-space?user_id='+user_id,
+				});
+			},
 			// 获取用户相关数据
 			getCounts(){
 				this.$H.get('/user/getcounts/'+this.user.id,{},{
