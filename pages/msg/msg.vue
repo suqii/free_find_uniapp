@@ -3,7 +3,7 @@
 		<!-- 导航 -->
 		<!-- #ifndef APP-PLUS -->
 		<uni-nav-bar :shadow="false" :border="false"
-		@click-left="clickLeft" @click-right="clickRight" title="小纸条">
+		@click-left="clickLeft" @click-right="clickRight" title="消息">
 			<!-- 左边图标 -->
 			<block slot="left">
 				<view class="iconfont icon-user-detail mx-2" 

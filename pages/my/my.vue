@@ -24,7 +24,7 @@
 			<text class="iconfont icon-jinru"></text>
 		</view>
 		
-		<view class="flex align-center px-3 py-2">
+		<view class="flex align-center px-3 py-2" @tap="clickLeft()">
 			<view class="flex-1 flex flex-column align-center justify-center"
 			v-for="(item,index) in myData" :key="index">
 				<text class="font-lg font-weight-bold">{{item.num}}</text>
@@ -116,6 +116,13 @@
 			}
 		},
 		methods: {
+			// 粉丝页面
+			clickLeft(){
+				this.navigateTo({
+					url: '../user-list/user-list',
+				})
+				// this.$refs.popup.close()
+			},
       // 打开个人空间
 			openSpace(user_id) {
         console.log("个人空间")
