@@ -242,6 +242,7 @@
             "path" : "pages/user-space/user-space",
             "style" : {
 				"navigationBarTitleText":"个人空间",
+        "navigationBarBackgroundColor": "transparent",
 				"app-plus":{
 					"titleNView":{
 						"buttons":[{

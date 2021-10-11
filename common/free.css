@@ -86,6 +86,7 @@
 .justify-start{justify-content:flex-start;}
 .justify-end{justify-content:flex-end;}
 .justify-between{justify-content:space-between;}
+.justify-around{justify-content:space-around;}
 .justify-center{justify-content:center;}
 .align-center{ align-items: center; }
 .align-stretch{ align-items: stretch; }
@@ -325,6 +326,8 @@
   border-bottom-width: 1rpx;
   border-bottom-style: solid;
   border-bottom-color: #dee2e6;
+  
+  
 }
 .border-left {
   border-left-width: 1rpx;
