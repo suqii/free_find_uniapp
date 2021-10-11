@@ -30,6 +30,8 @@
 	@import "./common/animate.css";
 	/* 自定义样式库 */
 	@import "./common/free.css";
+	/* 阿里线上图标样式库 */
+	@import "static/css/iconfont.css";
 	/* 全局样式 */
 	@import "./common/common.css";
 	

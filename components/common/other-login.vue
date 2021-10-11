@@ -55,7 +55,7 @@
 							// #ifdef MP-ALIPAY
 							case 'alipay':
 								providerName = '支付宝登录';
-								icon='changyonglogo30';
+								icon='icon-changyonglogo30';
 								bgColor = 'bg-primary'
 								break;
 							// #endif
