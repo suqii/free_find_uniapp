@@ -30,16 +30,16 @@
 				<scroll-view scroll-y="true" :style="'height:'+scrollH+'px;'">
 					
 					<!-- 热门分类 -->
-					<hot-cate :hotCate="hotCate"></hot-cate>
+					<!-- <hot-cate :hotCate="hotCate"></hot-cate> -->
 					<!-- 搜索框 -->
 					<view class="p-2">
 						<view class="bg-light rounded flex align-center justify-center py-2 text-secondary" @click="openSearch">
-							<text class="iconfont icon-sousuo mr-2"></text>
+							<text class="iconfont icon-tubiao111 mr-2"></text>
 							搜索话题
 						</view>
 					</view>
 					<!-- 轮播图 -->
-					<swiper class="px-2 pb-2" :indicator-dots="true" 
+					<!-- <swiper class="px-2 pb-2" :indicator-dots="true" 
 					:autoplay="true" 
 					:interval="3000" :duration="1000">
 						<swiper-item v-for="(item,index) in swiperList"
@@ -48,7 +48,7 @@
 							style="height: 300rpx;" 
 							class="w-100 rounded"></image>
 						</swiper-item>
-					</swiper>
+					</swiper> -->
 					<divider></divider>
 					<!-- 最近更新 -->
 					<view class="p-2 font-md">最近更新</view>
@@ -72,7 +72,7 @@
 	import loadMore from '@/components/common/load-more.vue';
 	
 	import hotCate from '@/components/news/hot-cate.vue';
-	import topicList from '@/components/news/topic-list.vue';
+	import topicList from '@/components/news/topic-list2.vue';
 	import noThing from '@/components/common/no-thing.vue';
 	export default {
 		components: {
