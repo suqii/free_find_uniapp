@@ -1,5 +1,5 @@
 <template>
-	<view class="p-2 animated fast fadeIn ">
+	<view class="p-2 animated fast fadeIn box">
 		<!-- 头像昵称 | 关注按钮 -->
 		<view class="con">
 			
@@ -191,11 +191,15 @@
 	.support-active{
 		color: #FF4A6A;
 	}
+	.box{
+		/* background: white; */
+		background-color: rgb(245, 245, 244);
+	}
 	.con{
 		border-radius: 30rpx;
 		/* background-color: red; */
 		padding-bottom: 14rpx;
-		box-shadow:  00px 0px 40px #888888;
-		             /* -0px -0px 80px #ffffff; */
+		box-shadow:  0rpx 10rpx 20rpx #cccccc,
+		             -0rpx -10rpx 20rpx #ffffff;
 	}
 </style>

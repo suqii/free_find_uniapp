@@ -14,7 +14,7 @@
     <!-- 头部 -->
     <view
       class="flex  align-center flex-column"
-      style="background: rgb(255,255,255); border-radius: 40rpx 40rpx 0 0;margin-top:90rpx;padding-top:70rpx;position:relative;top:-20rpx"
+      style="background: rgb(255,255,255); border-radius: 40rpx 40rpx 0 0;margin-top:250rpx;padding-top:70rpx;position:relative;top:-20rpx"
     >
       <!-- 头像 -->
       <image
@@ -25,7 +25,7 @@
       <image
         :src="userinfo.userpic"
         mode="aspectFill"
-        style="width: 100%; height: 480rpx;  position: absolute;top:-180rpx;z-index:-99;"
+        style="width: 100%; height: 480rpx;  position: absolute;top:-350rpx;z-index:-99;"
         
       ></image>
       <!-- 粉丝 -->
