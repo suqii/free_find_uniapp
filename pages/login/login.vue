@@ -35,7 +35,7 @@
           class="mb-2 pl-2"
           style="
             background: white;
-			box-shadow:  0px 0px 50px #bdbdbd;
+			box-shadow:  0px 0px 50rpx #bdbdbd;
             border-radius: 20rpx;
             display: flex;
             align-items: center;
@@ -53,7 +53,7 @@
           class="mb-2 pl-2 flex align-stretch"
           style="
             background: white;
-            box-shadow:  0px 0px 50px #bdbdbd;
+            box-shadow:  0px 0px 50rpx #bdbdbd;
             border-radius: 20rpx;
             display: flex;
             align-items: center;
@@ -86,7 +86,7 @@
           class="mb-2 flex align-stretch"
           style="
             background: white;
-            box-shadow:  0px 0px 50px #bdbdbd;
+            box-shadow:  0px 0px 50rpx #bdbdbd;
             border-radius: 20rpx;
             display: flex;
             align-items: center;
@@ -110,7 +110,7 @@
             class="border-bottom p-2 flex-1"
             style="
               background: white;
-              box-shadow:  0px 0px 50px #bdbdbd;
+              box-shadow:  0px 0px 50rpx #bdbdbd;
               border-radius: 20rpx;
               display: flex;
               align-items: center;
