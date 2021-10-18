@@ -40,7 +40,7 @@
 				</view> -->
 			</view>
 			<!-- 标题 -->
-			<view class="font-md  my-1 pl-3" @click="openDetail">{{item.title}}</view>
+			<view class="font-md   pl-3" @click="openDetail">{{item.title}}</view>
 			<!-- 图标按钮 -->
 			<view class="flex align-center">
 				<!-- 顶 -->

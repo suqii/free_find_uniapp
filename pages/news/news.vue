@@ -29,8 +29,7 @@
 			<swiper-item>
 				<scroll-view scroll-y="true" :style="'height:'+scrollH+'px;'">
 					
-					<!-- 热门分类 -->
-					<!-- <hot-cate :hotCate="hotCate"></hot-cate> -->
+					
 					<!-- 搜索框 -->
 					<view class="p-2">
 						<view class="bg-light rounded flex align-center justify-center py-2 text-secondary" @click="openSearch">
@@ -38,8 +37,9 @@
 							搜索话题
 						</view>
 					</view>
+					
 					<!-- 轮播图 -->
-					<!-- <swiper class="px-2 pb-2" :indicator-dots="true" 
+					<swiper class="px-2 pb-2" :indicator-dots="true" 
 					:autoplay="true" 
 					:interval="3000" :duration="1000">
 						<swiper-item v-for="(item,index) in swiperList"
@@ -48,7 +48,9 @@
 							style="height: 300rpx;" 
 							class="w-100 rounded"></image>
 						</swiper-item>
-					</swiper> -->
+					</swiper>
+					<!-- 热门分类 -->
+					<hot-cate :hotCate="hotCate"></hot-cate>
 					<divider></divider>
 					<!-- 最近更新 -->
 					<view class="p-2 font-md">最近更新</view>

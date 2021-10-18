@@ -6,12 +6,24 @@
 				更多 <text class="iconfont icon-jinru"></text>
 			</view>
 		</view>
-		<view class="flex align-center py-3 px-2 border-bottom">
+		<!-- <view class="flex align-center py-3 px-2 border-bottom">
 			<view class="border rounded bg-light mx-1 px-2 animated"
 			hover-class="jello" v-for="(item,index) in hotCate"
 			:key="index" @click="openMore">
 				{{item.name}}
 			</view>
+		</view> -->
+		<view>
+		    <scroll-view class="scroll-view_H" scroll-x="true" scroll-left="120">
+		        <view id="demo1" v-for="(item,index) in hotCate"
+			:key="index" @click="openMore" class="scroll-view-item_H " style="background: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg1.qunarzz.com%2Ftravel%2Fd1%2F1704%2Fd2%2F575c3a0d94f572b5.jpg_r_720x480x95_13fadb39.jpg&refer=http%3A%2F%2Fimg1.qunarzz.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1636268657&t=84668e628e8532dc4a394f6d9943625f);
+			    background-size:100% 100%;">
+					<view class="title">
+						{{item.name}}
+					</view>
+				</view>
+		 
+		    </scroll-view>
 		</view>
 	</view>
 </template>
@@ -30,4 +42,35 @@
 </script>
 
 <style>
+	.scroll-view_H {
+	  white-space: nowrap;
+	  width: 100%;
+	  height: 180rpx;
+	  /* border: 1px red solid; */
+	}
+	scroll-view ::-webkit-scrollbar {
+	  display: none;
+	  width: 0;
+	  height: 0;
+	  background-color: transparent;
+	}
+	
+	.scroll-view-item_H {
+	  display: inline-block;
+	  position: relative;
+	  width: 330rpx;
+	  height: 180rpx;
+	  margin-left: 30rpx;
+	  line-height: 180rpx;
+	  text-align: center;
+	  font-size: 36rpx;
+	  border-radius: 30rpx;
+	}
+	.title{
+		position: absolute;
+		bottom: 10rpx;
+		left: 20rpx;
+		font-size: large;
+		color: white;
+	}
 </style>
