@@ -147,7 +147,8 @@
 					this.hotCate = res.list.map(item=>{
 						return {
 							id:item.id,
-							name:item.classname
+							name:item.classname,
+							topicpic:item.classpic
 						}
 					})
 				})

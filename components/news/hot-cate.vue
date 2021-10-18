@@ -16,8 +16,8 @@
 		<view>
 		    <scroll-view class="scroll-view_H" scroll-x="true" scroll-left="120">
 		        <view id="demo1" v-for="(item,index) in hotCate"
-			:key="index" @click="openMore" class="scroll-view-item_H " style="background: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg1.qunarzz.com%2Ftravel%2Fd1%2F1704%2Fd2%2F575c3a0d94f572b5.jpg_r_720x480x95_13fadb39.jpg&refer=http%3A%2F%2Fimg1.qunarzz.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1636268657&t=84668e628e8532dc4a394f6d9943625f);
-			    background-size:100% 100%;">
+			:key="index" @click="openMore" class="scroll-view-item_H " :style="{'background-image':'url('+item.topicpic+')'}" style="background-size:100% 100%;">
+				<!-- style="{'background-image':'url('+item.topicpic+');background-size:100% 100%;'}" -->
 					<view class="title">
 						{{item.name}}
 					</view>
