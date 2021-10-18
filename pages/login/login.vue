@@ -34,7 +34,8 @@
         <view
           class="mb-2 pl-2"
           style="
-            background: rgb(224, 224, 224);
+            background: white;
+			box-shadow:  0px 0px 50px #bdbdbd;
             border-radius: 20rpx;
             display: flex;
             align-items: center;
@@ -51,7 +52,8 @@
         <view
           class="mb-2 pl-2 flex align-stretch"
           style="
-            background: rgb(224, 224, 224);
+            background: white;
+            box-shadow:  0px 0px 50px #bdbdbd;
             border-radius: 20rpx;
             display: flex;
             align-items: center;
@@ -83,7 +85,8 @@
         <view
           class="mb-2 flex align-stretch"
           style="
-            background: rgb(224, 224, 224);
+            background: white;
+            box-shadow:  0px 0px 50px #bdbdbd;
             border-radius: 20rpx;
             display: flex;
             align-items: center;
@@ -106,7 +109,8 @@
             placeholder="请输入验证码"
             class="border-bottom p-2 flex-1"
             style="
-              background: rgb(224, 224, 224);
+              background: white;
+              box-shadow:  0px 0px 50px #bdbdbd;
               border-radius: 20rpx;
               display: flex;
               align-items: center;
