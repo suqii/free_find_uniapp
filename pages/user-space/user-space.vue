@@ -65,11 +65,11 @@
           <!-- <view class="font-md">账号信息</view> -->
           <view class="font">趣寻号：{{ user_id }}</view>
           <view class="font">账号年龄：{{ userinfo.regtime }}</view>
+          <view class="font">个性签名：{{ userinfo.job }}</view>
         </view>
         <view class="p-3 border-bottom">
           <!-- <view class="font-md">个人信息</view> -->
           <view class="font">星座：{{ userinfo.birthday }}</view>
-          <view class="font">职业：{{ userinfo.job }}</view>
           <view class="font">故乡：{{ userinfo.path }}</view>
           <view class="font">情感：{{ userinfo.qg }}</view>
         </view>

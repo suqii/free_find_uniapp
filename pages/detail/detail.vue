@@ -25,7 +25,7 @@
 				<view v-if="item.fid" style="width: 60rpx;"></view>
 				<view class="flex w-100"
 				:class="item.fid ? 'bg-light rounded p-2' : ''">
-					<view class="uni-comment-face"><image :src="item.userpic"></image></view>
+					<view class="uni-comment-face"><image :src="item.userpic" @click="openSpace(item.userid)"></image></view>
 					<view class="uni-comment-body">
 						<view class="uni-comment-top">
 							<text>{{item.username}}</text>
@@ -134,6 +134,7 @@
 		 },
 		// #endif
 		methods: {
+
 			__init(data){
 				// 修改标题
 				uni.setNavigationBarTitle({
@@ -148,6 +149,12 @@
 					console.log(res);
 				})
 				this.getComments()
+			},
+      // 打开个人空间
+			openSpace(user_id) {
+				uni.navigateTo({
+					url: '/pages/user-space/user-space?user_id='+user_id,
+				});
 			},
 			// 点击评论
 			doComment(){

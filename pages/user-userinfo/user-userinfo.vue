@@ -14,6 +14,13 @@
 				<text class="iconfont icon-bianji1 ml-2"></text>
 			</view>
 		</uni-list-item>
+		<uni-list-item title="个性签名" >
+			<view class="flex align-center" slot="right">
+				<!-- <text>{{job}}</text> -->
+				<input class="uni-input text-right" v-model="job" />
+				<text class="iconfont icon-bianji1 ml-2"></text>
+			</view>
+		</uni-list-item>
 		<uni-list-item title="性别" @click="changeSex">
 			<view class="flex align-center" slot="right">
 				<text>{{sexText}}</text>
@@ -31,12 +38,6 @@
 		<uni-list-item title="情感" @click="changeEmotion">
 			<view class="flex align-center" slot="right">
 				<text>{{emotionText}}</text>
-				<text class="iconfont icon-bianji1 ml-2"></text>
-			</view>
-		</uni-list-item>
-		<uni-list-item title="职业" @click="changeJob">
-			<view class="flex align-center" slot="right">
-				<text>{{job}}</text>
 				<text class="iconfont icon-bianji1 ml-2"></text>
 			</view>
 		</uni-list-item>
