@@ -8,7 +8,7 @@
 </template>
 
 <script>
-	import commonList from '@/components/common/common-list.vue';
+	import commonList from '@/components/common/common-list2.vue';
 	import noThing from '@/components/common/no-thing.vue';
 	export default {
 		components: {

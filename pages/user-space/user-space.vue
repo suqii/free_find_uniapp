@@ -146,7 +146,7 @@
 
 <script>
 const emotionArray = ['保密', '未婚', '已婚']
-import commonList from '@/components/common/common-list.vue'
+import commonList from '@/components/common/common-list2.vue'
 import loadMore from '@/components/common/load-more.vue'
 import uniPopup from '@/components/uni-ui/uni-popup/uni-popup.vue'
 import $T from '@/common/time.js'

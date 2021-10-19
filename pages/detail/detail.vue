@@ -51,7 +51,7 @@
 </template>
 
 <script>
-	import commonList from '@/components/common/common-list.vue';
+	import commonList from '@/components/common/common-list2.vue';
 	import bottomInput from '@/components/common/bottom-input.vue';
 	import moreShare from '@/components/common/more-share.vue';
 	import $T from '@/common/time.js';

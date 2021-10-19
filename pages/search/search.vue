@@ -50,7 +50,7 @@
 
 <script>
 
-	import commonList from '@/components/common/common-list.vue';
+	import commonList from '@/components/common/common-list2.vue';
 	import topicList from '@/components/news/topic-list.vue';
 	import userList from '@/components/user-list/user-list.vue';
 	import loadMore from '@/components/common/load-more.vue';
