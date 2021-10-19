@@ -9,7 +9,7 @@
 			<view>
 				<image v-for="(item,index) in images" 
 				@click="preview(index)"
-				:src="item.url" class="w-100" mode="widthFix"></image>
+				:src="item.url" class="w-100 rounded" mode="widthFix"></image>
 			</view>
 		</common-list>
 		
@@ -51,7 +51,7 @@
 </template>
 
 <script>
-	import commonList from '@/components/common/common-list2.vue';
+	import commonList from '@/components/common/common-list.vue';
 	import bottomInput from '@/components/common/bottom-input.vue';
 	import moreShare from '@/components/common/more-share.vue';
 	import $T from '@/common/time.js';
