@@ -8,7 +8,7 @@
 			<view slot="right" class="text-muted">{{currentSize|format}}</view>
 		</uni-list-item>
 		<uni-list-item v-if="loginStatus" title="意见反馈" @click="open('user-feedback')"></uni-list-item>
-		<uni-list-item title="关于社区" @click="open('about')"></uni-list-item>
+		<uni-list-item title="关于趣寻" @click="open('about')"></uni-list-item>
 		
 		<view class="py-2 px-3" v-if="loginStatus">
 			<button class="bg-main text-white" style="border-radius: 50rpx;border: 0;" type="primary" @click="logout">退出登录</button>

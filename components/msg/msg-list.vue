@@ -37,6 +37,9 @@
 				return $T.gettime(value);
 			}
 		},
+		created() {
+					console.log(this.item)
+				},
 		methods: {
 			// 打开聊天页
 			open() {

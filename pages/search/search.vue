@@ -4,7 +4,7 @@
 		<!-- #ifndef APP-PLUS -->
 		<view style="height: 88rpx;z-index: 9999;"
 		class="flex align-center px-2 position-fixed left-0 top-0 right-0 bg-white">
-			<view class="iconfont icon-sousuo position-absolute text-muted" 
+			<view class="iconfont icon-tubiao111 position-absolute text-muted" 
 			style="left: 30rpx;"></view>
 			<input class="flex-1 rounded bg-light" style="padding: 5rpx 0 5rpx 50rpx;" type="text" v-model="searchText" @confirm="searchEvent"
 			placeholder="搜索" 

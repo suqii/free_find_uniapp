@@ -3,7 +3,7 @@
 		<!-- 未登录 -->
 		<template v-if="!loginStatus">
 			<view class="flex align-center justify-center py-2 font">
-				登录社区，体验更多功能
+				登录趣寻，体验更多功能
 			</view>
 			<other-login></other-login>
 			<view class="flex align-center justify-center py-2 font text-secondary" @click="openLogin">
@@ -32,15 +32,15 @@
 			</view>
 		</view>
 		
-		<view class="px-3 py-2">
+		<!-- <view class="px-3 py-2">
 			<image src="/static/demo/banner1.jpg" mode="aspectFill"
 			style="height: 170rpx;width: 100%;" class="rounded"></image>
-		</view>
+		</view> -->
 		
 		<uni-list-item title="浏览历史" showExtraIcon @click="openHistory">
 			<text slot="icon" class="iconfont icon-liulan"></text>
 		</uni-list-item>
-		<uni-list-item title="社区认证" showExtraIcon>
+		<uni-list-item title="趣寻认证" showExtraIcon>
 			<text slot="icon" class="iconfont icon-huiyuanvip"></text>
 		</uni-list-item>
 		<uni-list-item title="审核帖子" showExtraIcon>

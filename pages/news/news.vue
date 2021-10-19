@@ -70,7 +70,7 @@
 <script>
 
 	import uniNavBar from '@/components/uni-ui/uni-nav-bar/uni-nav-bar.vue';
-	import commonList from '@/components/common/common-list.vue';
+	import commonList from '@/components/common/common-list2.vue';
 	import loadMore from '@/components/common/load-more.vue';
 	
 	import hotCate from '@/components/news/hot-cate.vue';

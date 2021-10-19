@@ -9,7 +9,7 @@
 			</block>
 			<!-- 中间搜索框 -->
 			<view class="flex justify-center align-center rounded text-muted bg-light flex-1 mt-1" style="margin-left: -46upx;height: 60upx;" @tap="openSearch">
-				<view class="iconfont icon-sousuo mr-1"></view>搜索帖子
+				<view class="iconfont icon-tubiao111 mr-1"></view>搜索帖子
 			</view>
 			<!-- 右边图标 -->
 			<block slot="right">

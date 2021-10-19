@@ -227,7 +227,7 @@
         ,{
             "path" : "pages/about/about",
             "style" : {
-				"navigationBarTitleText":"关于社区"
+				"navigationBarTitleText":"关于趣寻"
 			}
         }
         ,{
@@ -280,7 +280,7 @@
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "社区交友",
+		"navigationBarTitleText": "交友",
 		"navigationBarBackgroundColor": "#FFFFFF",
 		"backgroundColor": "#FFFFFF"
 	},

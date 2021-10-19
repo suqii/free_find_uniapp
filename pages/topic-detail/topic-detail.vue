@@ -83,7 +83,7 @@
 		share_num:2
 	}];
 	import topicInfo from '@/components/topic-detail/topic-info.vue';
-	import commonList from '@/components/common/common-list.vue';
+	import commonList from '@/components/common/common-list2.vue';
 	import noThing from '@/components/common/no-thing.vue';
 	import loadMore from '@/components/common/load-more.vue';
 	export default {
@@ -103,10 +103,12 @@
 					news_count: 10
 				},
 				hotList:[{
-					title:"【新人必读】uni-app实战第二季商城类项目开发"
-				},{
-					title:"【新人必读】uni-app实战第三季仿微信项目开发"
-				}],
+					title:"【趣寻】搜寻乐趣"
+				},
+        {
+					title:"【新人必读】趣寻使用"
+				}
+        ],
 				
 				tabIndex:0,
 				tabBars:[{
