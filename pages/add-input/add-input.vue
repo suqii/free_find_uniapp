@@ -22,14 +22,18 @@
 		<!-- 选中的分类 -->
 		<view class="font-md px-2 py-1 flex">
 			<view class="border px-3 py main-color main-border-color flex align-center justify-center" style="border-radius: 50rpx;">
-				<text class="iconfont icon-huati mr-1"></text>
+				<picker mode="selector" :range="range" 
+			@change="choosePostClass">
+				<view class="iconfont icon-caidan animated mr-1"
+				hover-class="jello"></view>
+			</picker>
 				{{post_class_name ? "所属分类："+post_class_name : "请选择分类"}}
 			</view>
 		</view>
 		<!-- 选中的话题 -->
-		<view class="font-md px-2 py-1 flex">
+		<view class="font-md px-2 py-1 flex" @click="chooseTopic">
 			<view class="border px-3 py main-color main-border-color flex align-center justify-center" style="border-radius: 50rpx;">
-				<text class="iconfont icon-huati mr-1"></text>
+				<text class="iconfont icon-huati mr-1 animated"></text>
 				{{topic.title ? "所属话题："+topic.title : "请选择话题"}}
 			</view>
 		</view>
