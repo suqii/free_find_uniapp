@@ -173,6 +173,7 @@
 					});
 				}
 				if(this.post_class_id == 0){
+ 
 					return uni.showToast({
 						title: '请选择分类',
 						icon: 'none'
@@ -197,6 +198,11 @@
 						title: '发布成功',
 						icon:"none"
 					});
+          
+          var pages = getCurrentPages();  
+          var prevPage = pages[ pages.length - 2 ];  
+          prevPage.$vm.changeTabNum = this.post_class_id; 
+         
 					this.showBack = true
 					uni.navigateBack({
 						delta: 1

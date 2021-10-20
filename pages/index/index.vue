@@ -79,6 +79,7 @@
 				scrollInto:"",
 				tabIndex:0,
 				tabBars: [],
+        changeTabNum:0,
 				newsList:[]
 			}
 		},
@@ -136,6 +137,11 @@
 			uni.$off('updateFollowOrSupport',(e)=>{})
 			uni.$off('updateIndex',(e)=>{})
 			uni.$off('updateCommentsCount',(e)=>{})
+      
+		},
+    onShow() {
+      console.log(this.changeTabNum)
+			this.changeTab(this.changeTabNum)
 		},
 		methods: {
 			// #ifndef APP-PLUS
