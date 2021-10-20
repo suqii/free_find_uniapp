@@ -140,8 +140,9 @@
       
 		},
     onShow() {
-      console.log(this.changeTabNum)
+      this.getList()
 			this.changeTab(this.changeTabNum)
+      
 		},
 		methods: {
 			// #ifndef APP-PLUS

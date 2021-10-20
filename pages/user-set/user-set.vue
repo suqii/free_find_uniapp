@@ -83,6 +83,7 @@
 							uni.navigateBack({
 								delta: 2
 							});
+              this.$U.user_id=null;
 							uni.showToast({
 								title: '退出登录成功',
 								icon: 'none'

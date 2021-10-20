@@ -303,6 +303,7 @@ export default {
         .then((res) => {
           this.loading = false
           console.log(res)
+          this.$U.user_id = res.id
           // 修改vuex的state,持久化存储
           this.$store.commit('login', res)
           // 开启socket

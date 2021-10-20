@@ -229,6 +229,9 @@ export default {
       return value > 99 ? '99+' : value
     },
   },
+  onShow(){
+    this.getList()
+  },
   onLoad(e) {
     if (!e.user_id) {
       return uni.showToast({
@@ -264,7 +267,9 @@ export default {
         }
       })
     })
+    
   },
+ 
   onUnload() {
     uni.$off('updateFollowOrSupport', (e) => {})
     uni.$off('updateCommentsCount', (e) => {})
@@ -421,6 +426,7 @@ export default {
           })
       })
     },
+    
     // 进入编辑资料
     openUserInfo() {
       uni.navigateTo({

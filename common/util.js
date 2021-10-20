@@ -1,5 +1,6 @@
 import $H from './request.js';
 export default {
+  user_id:null,
 	// 监听网络
 	onNetWork(){
 		let func = (res)=>{

@@ -28,6 +28,14 @@
 			>
 				关注
 			</view>
+			<view @click="deletePost(item.id)" 
+			v-if="this.$U.user_id == item.user_id"
+			class="flex align-center justify-center rounded bg-main text-white animated faster" 
+			style="width: 90rpx;height: 50rpx;"
+			hover-class="jello"
+			>
+				删除
+			</view>
 		</view>
 		<!-- 标题 -->
 		<view class="font-md my-1" @click="openDetail">{{item.title}}</view>
@@ -93,6 +101,20 @@
 			})
 		},
 		methods: {
+      deletePost(post_id){
+        console.log("删除文章"+post_id)
+        this.$H.post('/post/deletePost',{
+						post_id:post_id
+					},{
+						token:true
+					}).then(res=>{
+						console.log(res)
+            uni.navigateBack({
+								delta: 1
+							});
+            
+					})
+      },
 			// 打开个人空间
 			openSpace(user_id) {
 				uni.navigateTo({
