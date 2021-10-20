@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2777494 */
-  src: url('//at.alicdn.com/t/font_2777494_5cfvogd03ll.woff2?t=1633923448392') format('woff2'),
-       url('//at.alicdn.com/t/font_2777494_5cfvogd03ll.woff?t=1633923448392') format('woff'),
-       url('//at.alicdn.com/t/font_2777494_5cfvogd03ll.ttf?t=1633923448392') format('truetype');
+  src: url('~@/static/iconfont/iconfont.woff2?t=1634711851054') format('woff2'),
+       url('~@/static/iconfont/iconfont.woff?t=1634711851054') format('woff'),
+       url('~@/static/iconfont/iconfont.ttf?t=1634711851054') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,26 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shouye:before {
+  content: "\e613";
+}
+
+.icon-shouye1:before {
+  content: "\e615";
+}
+
+.icon-shouye2:before {
+  content: "\e630";
+}
+
+.icon-shanchu:before {
+  content: "\e621";
+}
+
+.icon-dongtai:before {
+  content: "\e7ae";
 }
 
 .icon-shouji:before {
@@ -84,3 +104,4 @@
 .icon-shoucang1:before {
   content: "\e62a";
 }
+

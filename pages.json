@@ -292,23 +292,23 @@
 		"list":[{
 			"pagePath":"pages/index/index",
 			"text":"首页",
-			"iconPath":"static/tabbar/index.png",
-			"selectedIconPath":"static/tabbar/indexed.png"
+			"iconPath":"static/tabbar/theme2/home.png",
+			"selectedIconPath":"static/tabbar/theme2/home_selected.png"
 		},{
 			"pagePath":"pages/news/news",
 			"text":"动态",
-			"iconPath":"static/tabbar/news.png",
-			"selectedIconPath":"static/tabbar/newsed.png"
+			"iconPath":"static/tabbar/theme2/news.png",
+			"selectedIconPath":"static/tabbar/theme2/news_selected.png"
 		},{
 			"pagePath":"pages/msg/msg",
 			"text":"消息",
-			"iconPath":"static/tabbar/paper.png",
-			"selectedIconPath":"static/tabbar/papered.png"
+			"iconPath":"static/tabbar/theme2/msg.png",
+			"selectedIconPath":"static/tabbar/theme2/msg_selected.png"
 		},{
 			"pagePath":"pages/my/my",
 			"text":"我的",
-			"iconPath":"static/tabbar/home.png",
-			"selectedIconPath":"static/tabbar/homeed.png"
+			"iconPath":"static/tabbar/theme2/my.png",
+			"selectedIconPath":"static/tabbar/theme2/my_selected.png"
 		}]
 	}
 }

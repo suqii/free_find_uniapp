@@ -35,7 +35,7 @@
           class="mb-2 pl-2"
           style="
             background: white;
-			box-shadow:  0px 0px 50rpx #bdbdbd;
+			box-shadow:  0px 0px 30rpx #bdbdbd;
             border-radius: 20rpx;
             display: flex;
             align-items: center;
@@ -53,7 +53,7 @@
           class="mb-2 pl-2 flex align-stretch"
           style="
             background: white;
-            box-shadow:  0px 0px 50rpx #bdbdbd;
+            box-shadow:  0px 0px 30rpx #bdbdbd;
             border-radius: 20rpx;
             display: flex;
             align-items: center;
@@ -75,7 +75,7 @@
               font
               text-muted
             "
-            style="width: 150rpx"
+            style="width: 130rpx"
             >忘记密码？</view
           > -->
         </view>
@@ -86,7 +86,7 @@
           class="mb-2 flex align-stretch"
           style="
             background: white;
-            box-shadow:  0px 0px 50rpx #bdbdbd;
+            box-shadow:  0px 0px 30rpx #bdbdbd;
             border-radius: 20rpx;
             display: flex;
             align-items: center;
@@ -110,7 +110,7 @@
             class="border-bottom p-2 flex-1"
             style="
               background: white;
-              box-shadow:  0px 0px 50rpx #bdbdbd;
+              box-shadow:  0px 0px 30rpx #bdbdbd;
               border-radius: 20rpx;
               display: flex;
               align-items: center;
@@ -138,7 +138,7 @@
     <view class="py-2 px-3">
       <button
         class="text-white"
-        style="border-radius: 50rpx; border: 0; width: 80%"
+        style="border-radius: 30rpx; border: 0; width: 80%"
         type="primary"
         :disabled="disabled"
         :class="disabled ? 'bg-main-disabled' : 'bg-main'"
