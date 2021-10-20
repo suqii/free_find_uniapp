@@ -201,7 +201,7 @@
           
           var pages = getCurrentPages();  
           var prevPage = pages[ pages.length - 2 ];  
-          prevPage.$vm.changeTabNum = this.post_class_id; 
+          prevPage.$vm.changeTabNum = this.post_class_id -1; 
          
 					this.showBack = true
 					uni.navigateBack({

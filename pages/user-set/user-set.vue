@@ -81,7 +81,7 @@
 							// 关闭socket
 							this.$store.dispatch('closeSocket')
 							uni.navigateBack({
-								delta: 1
+								delta: 2
 							});
 							uni.showToast({
 								title: '退出登录成功',
