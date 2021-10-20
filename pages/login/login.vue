@@ -35,7 +35,7 @@
           class="mb-2 pl-2"
           style="
             background: white;
-			box-shadow:  0px 0px 20rpx #bdbdbd;
+		
             border-radius: 20rpx;
             display: flex;
             align-items: center;
@@ -53,7 +53,7 @@
           class="mb-2 pl-2 flex align-stretch"
           style="
             background: white;
-            box-shadow:  0px 0px 20rpx #bdbdbd;
+            
             border-radius: 20rpx;
             display: flex;
             align-items: center;
@@ -86,7 +86,7 @@
           class="mb-2 flex align-stretch"
           style="
             background: white;
-            box-shadow:  0px 0px 30rpx #bdbdbd;
+            
             border-radius: 20rpx;
             display: flex;
             align-items: center;
@@ -110,26 +110,17 @@
             class="border-bottom p-2 flex-1"
             style="
               background: white;
-              box-shadow:  0px 0px 30rpx #bdbdbd;
+              
               border-radius: 20rpx;
               display: flex;
               align-items: center;
             "
           />
           <view
-            class="
-              border-bottom
-              flex
-              align-center
-              justify-center
-              font-sm
-              text-white
-              ml-1
-            "
+            class="border-bottom flex align-center justify-center font-sm text-white ml-1"
             :class="codeTime > 0 ? 'bg-main-disabled' : 'bg-main'"
-            style="width: 170rpx; border-radius: 20rpx"
-            @click="getCode"
-            >{{ codeTime > 0 ? codeTime + ' s' : '获取验证码' }}</view
+            style="width: 170rpx; border-radius: 20rpx;"
+            @click="getCode">{{ codeTime > 0 ? codeTime + ' s' : '获取验证码' }}</view
           >
         </view>
       </template>

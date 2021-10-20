@@ -30,8 +30,7 @@
 		<!-- 弹出层 -->
 		<uni-popup ref="popup" type="top">
 			<view class="flex align-center justify-center font-md border-bottom py-2" hover-class="bg-light" @click="popupEvent('friend')">
-				<text class="iconfont icon-shouye1
- mr-2"></text> 添加好友
+				<text class="iconfont icon-shouye1 mr-2"></text> 添加好友
 			</view>
 			<view class="flex align-center justify-center font-md py-2" hover-class="bg-light"  @click="popupEvent('clear')">
 				<text class="iconfont icon-shanchu mr-2"></text> 清除列表
