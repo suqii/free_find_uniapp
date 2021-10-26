@@ -71,6 +71,8 @@
 					})
 				}
 			})
+			// 修改标题
+			uni.setNavigationBarTitle({ title:ToUser.username })
 		},
 		// 页面加载完成的时候
 		onReady() {
