@@ -1,35 +1,46 @@
 <template>
-  <view >
+  <view>
     <!-- #ifdef MP -->
-    
+
     <uni-nav-bar
       :shadow="false"
       :fixed="true"
       :border="false"
       right-text="菜单"
-      
       @click-right="clickNavigationButton"
     ></uni-nav-bar>
     <!-- #endif -->
     <!-- 头部 -->
     <view
-      class="flex  align-center flex-column"
-      style="background: rgb(255,255,255); border-radius: 40rpx 40rpx 0 0;margin-top:250rpx;padding-top:70rpx;position:relative;top:-20rpx"
+      class="flex align-center flex-column"
+      style="
+        background: rgb(255, 255, 255);
+        border-radius: 40rpx 40rpx 0 0;
+        margin-top: 250rpx;
+        padding-top: 70rpx;
+        position: relative;
+        top: -20rpx;
+      "
     >
       <!-- 头像 -->
       <image
         :src="userinfo.userpic"
-        style="width: 180rpx; height: 180rpx;position: absolute;top:-90rpx;"
+        style="width: 180rpx; height: 180rpx; position: absolute; top: -90rpx"
         class="rounded-circle"
       ></image>
       <image
         :src="userinfo.userpic"
         mode="aspectFill"
-        style="width: 100%; height: 480rpx;  position: absolute;top:-350rpx;z-index:-99;"
-        
+        style="
+          width: 100%;
+          height: 480rpx;
+          position: absolute;
+          top: -350rpx;
+          z-index: -99;
+        "
       ></image>
       <!-- 粉丝 -->
-      <view class="pt-1" style="width:100%">
+      <view class="pt-1" style="width: 100%">
         <view class="flex align-center justify-around">
           <view
             class="flex-1 flex flex-column align-center justify-center"
@@ -60,19 +71,14 @@
 				</view> -->
       </view>
       <!-- 账号信息 -->
-      <view class="animated fast fadeIn" style="width:100%;">
+      <view class="animated fast fadeIn" style="width: 100%">
         <view class="p-3 border-bottom">
           <!-- <view class="font-md">账号信息</view> -->
           <view class="font">趣寻号：{{ user_id }}</view>
           <view class="font">账号年龄：{{ userinfo.regtime }}</view>
           <view class="font">个性签名：{{ userinfo.job }}</view>
         </view>
-        <view class="p-3 border-bottom">
-          <!-- <view class="font-md">个人信息</view> -->
-          <view class="font">星座：{{ userinfo.birthday }}</view>
-          <view class="font">故乡：{{ userinfo.path }}</view>
-          <view class="font">情感：{{ userinfo.qg }}</view>
-        </view>
+        
       </view>
     </view>
 
@@ -91,22 +97,16 @@
       >
     </view>
 
-    <!-- <template v-if="tabIndex === 0">
+    <template v-if="tabIndex === 0">
       <view class="animated fast fadeIn">
-        <view class="p-3 border-bottom">
-          <view class="font-md">账号信息</view>
-          <view class="font">账号年龄：{{ userinfo.regtime }}</view>
-          <view class="font">账号id：{{ user_id }}</view>
-        </view>
-        <view class="p-3 border-bottom">
-          <view class="font-md">个人信息</view>
-          <view class="font">星座：{{ userinfo.birthday }}</view>
-          <view class="font">职业：{{ userinfo.job }}</view>
-          <view class="font">故乡：{{ userinfo.path }}</view>
-          <view class="font">情感：{{ userinfo.qg }}</view>
-        </view>
+       <view class="p-3 border-bottom">
+         <!-- <view class="font-md">个人信息</view> -->
+         <view class="font">星座：{{ userinfo.birthday }}</view>
+         <view class="font">故乡：{{ userinfo.path }}</view>
+         <view class="font">情感：{{ userinfo.qg }}</view>
+       </view>
       </view>
-    </template> -->
+    </template>
     <template>
       <view class="animated fast fadeIn">
         <common-list
@@ -163,7 +163,7 @@ export default {
     return {
       user_id: 0,
       userinfo: {
-        userpic: '/static/default.jpg',
+        userpic: '/static/default2.png',
         username: '',
         sex: 0,
         age: 20,
@@ -190,9 +190,9 @@ export default {
       ],
       tabIndex: 0,
       tabBars: [
-        // {
-        //   name: '主页',
-        // },
+        {
+          name: '主页',
+        },
         {
           name: '帖子',
           list: [],
@@ -229,7 +229,7 @@ export default {
       return value > 99 ? '99+' : value
     },
   },
-  onShow(){
+  onShow() {
     this.getList()
   },
   onLoad(e) {
@@ -267,9 +267,8 @@ export default {
         }
       })
     })
-    
   },
- 
+
   onUnload() {
     uni.$off('updateFollowOrSupport', (e) => {})
     uni.$off('updateCommentsCount', (e) => {})
@@ -426,7 +425,7 @@ export default {
           })
       })
     },
-    
+
     // 进入编辑资料
     openUserInfo() {
       uni.navigateTo({

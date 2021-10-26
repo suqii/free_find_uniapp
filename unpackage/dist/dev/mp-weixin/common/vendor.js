@@ -2671,7 +2671,8 @@
       /*! no static exports found */
       /***/ function (module, exports, __webpack_require__) {
         'use strict'
-        /* WEBPACK VAR INJECTION */ ;(function (uni) {
+        /* WEBPACK VAR INJECTION */
+        ;(function (uni) {
           Object.defineProperty(exports, '__esModule', { value: true })
           exports.default = void 0
           var _regenerator = _interopRequireDefault(
@@ -3373,7 +3374,7 @@
                   from_username: state.user.username,
                   from_userpic: state.user.userpic
                     ? state.user.userpic
-                    : '/static/default.jpg',
+                    : '/static/default2.png',
                   type: data.type,
                   data: data.data,
                   time: new Date().getTime(),
@@ -3387,7 +3388,7 @@
                 /*
                                                                                                                                          {
                                                                                                                                          	"user_id": 331,
-                                                                                                                                         	"avatar": "/static/default.jpg",
+                                                                                                                                         	"avatar": "/static/default2.png",
                                                                                                                                          	"username": "13450772004",
                                                                                                                                          	"update_time": 1578216988,
                                                                                                                                          	"data": "看看有么有移除",
@@ -4240,7 +4241,8 @@
       /*! no static exports found */
       /***/ function (module, exports, __webpack_require__) {
         'use strict'
-        /* WEBPACK VAR INJECTION */ ;(function (global) {
+        /* WEBPACK VAR INJECTION */
+        ;(function (global) {
           /*!
            * vuex v3.6.2
            * (c) 2021 Evan You
@@ -5799,7 +5801,8 @@
       /*! no static exports found */
       /***/ function (module, exports, __webpack_require__) {
         'use strict'
-        /* WEBPACK VAR INJECTION */ ;(function (uni) {
+        /* WEBPACK VAR INJECTION */
+        ;(function (uni) {
           Object.defineProperty(exports, '__esModule', { value: true })
           exports.default = void 0
           var _config = _interopRequireDefault(
@@ -6022,7 +6025,8 @@
       /*! no static exports found */
       /***/ function (module, exports, __webpack_require__) {
         'use strict'
-        /* WEBPACK VAR INJECTION */ ;(function (uni) {
+        /* WEBPACK VAR INJECTION */
+        ;(function (uni) {
           Object.defineProperty(exports, '__esModule', { value: true })
           exports.default = void 0
           var _request = _interopRequireDefault(
@@ -6163,7 +6167,8 @@
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         'use strict'
         __webpack_require__.r(__webpack_exports__)
-        /* WEBPACK VAR INJECTION */ ;(function (global) {
+        /* WEBPACK VAR INJECTION */
+        ;(function (global) {
           /*!
            * Vue.js v2.6.11
            * (c) 2014-2021 Evan You
@@ -31078,7 +31083,8 @@
       /*! no static exports found */
       /***/ function (module, exports, __webpack_require__) {
         'use strict'
-        /* WEBPACK VAR INJECTION */ ;(function (uni) {
+        /* WEBPACK VAR INJECTION */
+        ;(function (uni) {
           Object.defineProperty(exports, '__esModule', { value: true })
           exports.compileI18nJsonStr = compileI18nJsonStr
           exports.hasI18nJson = hasI18nJson
