@@ -21,6 +21,9 @@
 					<view class="title">
 						{{item.name}}
 					</view>
+					<!-- 导航部分 -->
+					<view class="iconfont icon-fabu1 pos" style="color: white;" @click.native.stop="openMap(item.longitude,item.latitude)">
+					</view>
 				</view>
 		 
 		    </scroll-view>
@@ -36,6 +39,10 @@
 				uni.navigateTo({
 					url: '../../pages/topic-nav/topic-nav',
 				});
+			},
+			// 打开地图
+			openMap(longitude,latitude) {
+				console.log("打开地图,经纬度为"+'('+longitude+','+latitude+')')
 			},
 		},
 	}
@@ -70,6 +77,13 @@
 		position: absolute;
 		bottom: 10rpx;
 		left: 20rpx;
+		font-size: large;
+		color: white;
+	}
+	.pos{
+		position: absolute;
+		top: 10rpx;
+		right: 20rpx;
 		font-size: large;
 		color: white;
 	}

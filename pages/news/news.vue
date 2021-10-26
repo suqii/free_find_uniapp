@@ -148,6 +148,8 @@
 						return {
 							id:item.id,
 							name:item.classname,
+							longitude:item.longitude,
+							latitude:item.latitude,
 							topicpic:item.classpic
 						}
 					})

@@ -95,6 +95,11 @@
     /* 小程序特有相关 */
     "mp-weixin" : {
         "appid" : "wxae93bc49098e0811",
+		"permission" : {
+			    "scope.userLocation" : {
+			        "desc" : "获取位置信息"
+			    }
+		},
         "setting" : {
             "urlCheck" : false
         },
