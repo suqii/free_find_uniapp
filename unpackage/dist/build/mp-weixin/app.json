@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/news/news",
+    "pages/msg/msg",
+    "pages/my/my",
+    "pages/search/search",
+    "pages/add-input/add-input",
+    "pages/topic-nav/topic-nav",
+    "pages/topic-detail/topic-detail",
+    "pages/user-list/user-list",
+    "pages/user-chat/user-chat",
+    "pages/detail/detail",
+    "pages/user-set/user-set",
+    "pages/user-password/user-password",
+    "pages/user-email/user-email",
+    "pages/user-userinfo/user-userinfo",
+    "pages/user-feedback/user-feedback",
+    "pages/about/about",
+    "pages/login/login",
+    "pages/user-space/user-space",
+    "pages/user-safe/user-safe",
+    "pages/user-phone/user-phone",
+    "pages/history/history"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "交友",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#FC5C82",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tabbar/theme2/home.png",
+        "selectedIconPath": "static/tabbar/theme2/home_selected.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "动态",
+        "iconPath": "static/tabbar/theme2/news.png",
+        "selectedIconPath": "static/tabbar/theme2/news_selected.png"
+      },
+      {
+        "pagePath": "pages/msg/msg",
+        "text": "消息",
+        "iconPath": "static/tabbar/theme2/msg.png",
+        "selectedIconPath": "static/tabbar/theme2/msg_selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/tabbar/theme2/my.png",
+        "selectedIconPath": "static/tabbar/theme2/my_selected.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "divider": "/components/common/divider",
+    "no-thing": "/components/common/no-thing"
+  },
+  "sitemapLocation": "sitemap.json"
+}

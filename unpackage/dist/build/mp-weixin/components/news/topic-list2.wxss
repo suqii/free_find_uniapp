@@ -1,0 +1,1 @@
+.card-box{margin-bottom:20rpx;position:relative;padding:0 25rpx}.card-txt{z-index:99;position:absolute;bottom:30rpx;left:40rpx}
