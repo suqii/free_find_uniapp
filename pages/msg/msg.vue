@@ -105,6 +105,7 @@
 					// 停止下拉刷新
 					uni.stopPullDownRefresh()
 				},2000)
+				uni.stopPullDownRefresh()
 			},
 			// 弹出层选项点击事件
 			popupEvent(e){
