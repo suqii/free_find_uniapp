@@ -129,7 +129,7 @@
         hover-class="bg-light"
         @click="doBlack"
       >
-        <text class="iconfont icon-sousuo mr-2"></text>
+        <text class="iconfont icon-shouye1 mr-2"></text>
         {{ userinfo.isblack ? '移出黑名单' : '加入黑名单' }}
       </view>
       <view
@@ -138,7 +138,7 @@
         hover-class="bg-light"
         @click="openChat"
       >
-        <text class="iconfont icon-shanchu mr-2"></text> 聊天
+        <text class="iconfont icon-xiaoxi mr-2"></text> 聊天
       </view>
     </uni-popup>
   </view>
