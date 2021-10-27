@@ -1,10 +1,11 @@
 <template>
-	<view class="flex align-center px-5 py-3">
+	<view class="flex align-center px-5 py-3" style="width:100%">
 		<!-- #ifdef APP-PLUS || MP-ALIPAY -->
 		<view class="flex-1 flex align-center justify-center"
+    style="width:100%"
 		v-for="(item,index) in providerList" :key="index"
 		@click="login(item)">
-			<view :class="item.icon + ' '+item.bgColor" class="iconfont font-lg text-white flex align-center justify-center rounded-circle" style="width: 100rpx;height: 100rpx;"></view>
+			<view v-if="item.name!=''" :class="item.icon + ' '+item.bgColor" class="iconfont font-lg text-white flex align-center justify-center rounded-circle" style="width: 100rpx;height: 100rpx;"></view>
 		</view>
 		<!-- #endif -->
 		

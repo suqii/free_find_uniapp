@@ -19,23 +19,23 @@
       ></image>
       <image
         v-else
-        src="/static/common/4.png"
-        style="width: 320rpx; height: 240rpx; background: rgb(255, 255, 255)"
+        src="/static/common/3.png"
+        style="width: 300rpx; height: 300rpx; background: rgb(255, 255, 255)"
       ></image>
     </view>
     <view
       class="text-center"
       style="font-size: 45rpx; color: rgb(248, 127, 151)"
-      >{{ status ? '手机验证码登录' : '账号密码登录' }}</view
+      >{{ status ? '验证码登录' : '账号密码登录' }}</view
     >
 
     <view class="px-2" style="width: 80%; margin: 0 auto">
       <template v-if="!status">
         <view
-          class="mb-2 pl-2 "
+          class="mb-2 pl-2"
           style="
             background: white;
-			box-shadow:  0px 0px 5rpx #bdbdbd;
+            box-shadow: 0px 0px 10rpx #c2c2c2;
             border-radius: 20rpx;
             display: flex;
             align-items: center;
@@ -46,14 +46,14 @@
             type="text"
             v-model="username"
             placeholder="昵称/手机号/邮箱"
-            class="border-bottom p-2"
+            class="p-2"
           />
         </view>
         <view
           class="mb-2 pl-2 flex align-stretch"
           style="
             background: white;
-            box-shadow:  0px 0px 5rpx #bdbdbd;
+            box-shadow: 0px 0px 10rpx #c2c2c2;
             border-radius: 20rpx;
             display: flex;
             align-items: center;
@@ -64,11 +64,11 @@
             type="text"
             v-model="password"
             placeholder="请输入密码"
-            class="border-bottom p-2 flex-1"
+            class="p-2 flex-1"
           />
           <!-- <view
             class="
-              border-bottom
+              
               flex
               align-center
               justify-center
@@ -82,24 +82,44 @@
       </template>
 
       <template v-else>
+        <!-- 手机号 -->
         <view
+          v-if="registFlag"
           class="mb-2 flex align-stretch"
           style="
             background: white;
-            box-shadow:  0px 0px 5rpx #bdbdbd;
+            box-shadow: 0px 0px 10rpx #c2c2c2;
             border-radius: 20rpx;
             display: flex;
             align-items: center;
           "
         >
-          <view class="border-bottom flex align-center justify-center font px-2"
-            >+86</view
-          >
+          <view class="flex align-center justify-center font px-2">+86</view>
           <input
             type="text"
             v-model="phone"
-            placeholder="手机号"
-            class="border-bottom p-2 flex-1"
+            placeholder="请输入注册手机号"
+            class="p-2 flex-1"
+          />
+        </view>
+        <!-- 邮箱 -->
+        <view
+          v-if="!registFlag"
+          class="mb-2 pl-2"
+          style="
+            background: white;
+            box-shadow: 0px 0px 10rpx #c2c2c2;
+            border-radius: 20rpx;
+            display: flex;
+            align-items: center;
+          "
+        >
+          <icon class="iconfont icon-youxiang"></icon>
+          <input
+            type="text"
+            v-model="username"
+            placeholder="请输入注册邮箱"
+            class="p-2"
           />
         </view>
         <view class="mb-2 flex align-stretch">
@@ -107,20 +127,21 @@
             type="text"
             v-model="code"
             placeholder="请输入验证码"
-            class="border-bottom p-2 flex-1"
+            class="p-2 flex-1"
             style="
               background: white;
-              box-shadow:  0px 0px 5rpx #bdbdbd;
+              box-shadow: 0px 0px 10rpx #c2c2c2;
               border-radius: 20rpx;
               display: flex;
               align-items: center;
             "
           />
           <view
-            class="border-bottom flex align-center justify-center font-sm text-white ml-1"
+            class="flex align-center justify-center font-sm text-white ml-1"
             :class="codeTime > 0 ? 'bg-main-disabled' : 'bg-main'"
-            style="width: 170rpx; border-radius: 20rpx;"
-            @click="getCode">{{ codeTime > 0 ? codeTime + ' s' : '获取验证码' }}</view
+            style="width: 170rpx; border-radius: 20rpx"
+            @click="getCode"
+            >{{ codeTime > 0 ? codeTime + ' s' : '获取验证码' }}</view
           >
         </view>
       </template>
@@ -145,10 +166,16 @@
         {{ status ? '账号密码登录' : '验证码登陆' }}
       </view>
       <text class="text-muted mx-2">|</text>
-      <view class="text-primary font-sm">登录遇到问题</view>
+      <view v-if="!status" class="text-primary font-sm">登录遇到问题</view>
+      <view
+        v-if="status"
+        class="text-primary font-sm"
+        @click="registFlag = !registFlag"
+        >{{ registFlag ? '前往邮箱注册' : '前往手机号注册' }}</view
+      >
     </view>
 
-    <view class="flex align-center justify-center" >
+    <view class="flex align-center justify-center">
       <view
         style="height: 1rpx; background-color: #dddddd; width: 100rpx"
       ></view>
@@ -158,7 +185,7 @@
       ></view>
     </view>
 
-    <other-login  back></other-login>
+    <other-login back></other-login>
 
     <!-- <view class="flex align-center justify-center text-muted">
 			注册即代表同意<text class="text-primary">《xxx社区协议》</text>
@@ -183,6 +210,7 @@ export default {
       code: '',
       codeTime: 0,
       loading: false,
+      registFlag: true,
     }
   },
   onLoad() {},
@@ -222,35 +250,41 @@ export default {
       if (this.codeTime > 0) {
         return
       }
-      // 验证手机号
-      if (!this.validate()) return
-      // 请求数据
-      this.$H
-        .post(
-          '/user/sendcode',
-          {
-            phone: this.phone,
-          },
-          {
-            native: true,
-          }
-        )
-        .then((res) => {
-          uni.showToast({
-            title: res.data.msg,
-            icon: 'none',
-          })
-          // 倒计时
-          this.codeTime = 60
-          let timer = setInterval(() => {
-            if (this.codeTime >= 1) {
-              this.codeTime--
-            } else {
-              this.codeTime = 0
-              clearInterval(timer)
+      if (this.registFlag) {
+        console.log('手机注册')
+        // 验证手机号
+        if (!this.validate()) return
+        // 请求数据-手机
+        this.$H
+          .post(
+            '/user/sendcode',
+            {
+              phone: this.phone,
+            },
+            {
+              native: true,
             }
-          }, 1000)
-        })
+          )
+          .then((res) => {
+            uni.showToast({
+              title: res.data.msg,
+              icon: 'none',
+            })
+            // 倒计时
+            this.codeTime = 60
+            let timer = setInterval(() => {
+              if (this.codeTime >= 1) {
+                this.codeTime--
+              } else {
+                this.codeTime = 0
+                clearInterval(timer)
+              }
+            }, 1000)
+          })
+      } else {
+        // 验证手机号
+        console.log('发送邮箱')
+      }
     },
     // 表单验证
     validate() {
@@ -272,12 +306,16 @@ export default {
       let url = ''
       let data = ''
       if (this.status) {
-        // 手机验证码登录
-        if (!this.validate()) return
-        url = '/user/phonelogin'
-        data = {
-          phone: this.phone,
-          code: this.code,
+        if (this.registFlag) {
+          // 手机验证码登录
+          if (!this.validate()) return
+          url = '/user/phonelogin'
+          data = {
+            phone: this.phone,
+            code: this.code,
+          }
+        } else {
+          console.log('邮箱登录')
         }
       } else {
         // 账号密码登录
