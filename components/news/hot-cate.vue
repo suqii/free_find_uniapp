@@ -42,7 +42,11 @@
 			},
 			// 打开地图
 			openMap(longitude,latitude) {
-				console.log("打开地图,经纬度为"+'('+longitude+','+latitude+')')
+				// console.log("打开地图,经纬度为"+'('+longitude+','+latitude+')')
+				
+				 uni.navigateTo({
+				   url:'/pages/map/map?longitude=' + longitude+'&latitude=' + latitude,
+				  })
 			},
 		},
 	}
