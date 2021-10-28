@@ -1,5 +1,5 @@
 //高德key，请不要使用本人的这个key用于生产环境
-const key = '49b8927b1ba20328fbc693696f77b598';
+const key = 'bfbe73ee6e5b338bff5c6a2fcdd6f533';
 //请注意使用我在static目录下的图片资源，你也可以自己修改
 
 const amapFile = require('./amap-uni.js'); 
