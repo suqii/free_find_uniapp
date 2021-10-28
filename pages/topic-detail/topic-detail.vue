@@ -31,7 +31,7 @@
     </view>
     <!-- 列表 -->
     <template v-if="listData.length > 0">
-      <block v-for="(item, index) in listData.reverse()" :key="index">
+      <block v-for="(item, index) in listData" :key="index">
         <common-list :item="item" :index="index"></common-list>
         <divider></divider>
       </block>

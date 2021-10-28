@@ -117,7 +117,7 @@
           <icon class="iconfont icon-youxiang"></icon>
           <input
             type="text"
-            v-model="username"
+            v-model="email"
             placeholder="请输入注册邮箱"
             class="p-2"
           />
@@ -207,6 +207,7 @@ export default {
       username: '',
       password: '',
       phone: '',
+      email: '',
       code: '',
       codeTime: 0,
       loading: false,
@@ -218,7 +219,8 @@ export default {
     disabled() {
       if (
         (this.username === '' || this.password === '') &&
-        (this.phone === '' || this.code === '')
+        (this.phone === '' || this.code === '') &&
+		(this.email === '' || this.code === '')
       ) {
         return true
       }
@@ -284,15 +286,57 @@ export default {
       } else {
         // 验证手机号
         console.log('发送邮箱')
+		// 验证邮箱
+		if (!this.validateE()) return
+		// 请求数据-手机
+		this.$H
+		  .post(
+		    '/user/sendEmail',
+		    {
+		      email: this.email,
+		    },
+		    {
+		      native: true,
+		    }
+		  )
+		  .then((res) => {
+		    uni.showToast({
+		      title: res.data.data.msg,
+		      icon: 'none',
+		    })
+		    // 倒计时
+		    this.codeTime = 60
+		    let timer = setInterval(() => {
+		      if (this.codeTime >= 1) {
+		        this.codeTime--
+		      } else {
+		        this.codeTime = 0
+		        clearInterval(timer)
+		      }
+		    }, 1000)
+		  })
       }
     },
-    // 表单验证
+    // 表单验证(手机)
     validate() {
       //手机号正则
       var mPattern = /^1[34578]\d{9}$/
       if (!mPattern.test(this.phone)) {
         uni.showToast({
           title: '手机号格式不正确',
+          icon: 'none',
+        })
+        return false
+      }
+      // ...更多验证
+      return true
+    },// 表单验证(邮箱)
+    validateE() {
+      //邮箱正则
+      var mPattern = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,5}$/
+      if (!mPattern.test(this.email)) {
+        uni.showToast({
+          title: '邮箱格式不正确',
           icon: 'none',
         })
         return false
@@ -315,6 +359,12 @@ export default {
             code: this.code,
           }
         } else {
+			if (!this.validateE()) return
+			url = '/user/emailLogin'
+			data = {
+			  email: this.email,
+			  code_email: this.code,
+			}
           console.log('邮箱登录')
         }
       } else {

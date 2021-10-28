@@ -10,7 +10,8 @@ export default {
 	},
 	request(options = {}){
 		
-		options.url = $C.webUrl+ '/api/v1' + options.url
+		// options.url = $C.webUrl+ '/api/v1' + options.url
+		options.url = $C.webUrl + options.url
 		options.method = options.method || this.common.method
 		options.header = options.header || this.common.header
 		
