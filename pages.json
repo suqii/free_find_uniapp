@@ -319,5 +319,8 @@
 			"iconPath":"static/tabbar/theme2/my.png",
 			"selectedIconPath":"static/tabbar/theme2/my_selected.png"
 		}]
-	}
+	},
+	"easycom": {
+			"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+		}
 }

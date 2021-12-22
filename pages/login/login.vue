@@ -31,7 +31,7 @@
 
     <view class="px-2" style="width: 80%; margin: 0 auto">
       <template v-if="!status">
-        <view
+        <!-- <view
           class="mb-2 pl-2"
           style="
             background: white;
@@ -48,8 +48,9 @@
             placeholder="昵称/手机号/邮箱"
             class="p-2"
           />
-        </view>
-        <view
+        </view> -->
+
+        <!-- <view
           class="mb-2 pl-2 flex align-stretch"
           style="
             background: white;
@@ -65,8 +66,8 @@
             v-model="password"
             placeholder="请输入密码"
             class="p-2 flex-1"
-          />
-          <!-- <view
+          /> -->
+        <!-- <view
             class="
               
               flex
@@ -78,6 +79,28 @@
             style="width: 130rpx"
             >忘记密码？</view
           > -->
+        <!-- </view> -->
+        <view>
+          <u-row customStyle="margin-bottom: 10px" justify="center">
+            <u-col span="12">
+              <u--input
+                v-model="username"
+                placeholder="昵称/手机号/邮箱"
+                prefixIcon="account-fill"
+                prefixIconStyle="font-size: 22px;color: #909399"
+              ></u--input>
+            </u-col>
+          </u-row>
+          <u-row customStyle="margin-bottom: 10px" justify="center">
+            <u-col span="12">
+              <u--input
+                v-model="password"
+                placeholder="请输入密码"
+                prefixIcon="lock-fill"
+                prefixIconStyle="font-size: 22px;color: #909399"
+              ></u--input>
+            </u-col>
+          </u-row>
         </view>
       </template>
 
@@ -148,7 +171,7 @@
     </view>
 
     <view class="py-2 px-3">
-      <button
+      <!-- <button
         class="text-white"
         style="border-radius: 50rpx; border: 0; width: 80%"
         type="primary"
@@ -158,7 +181,14 @@
         :loading="loading"
       >
         {{ loading ? '登录中...' : '登录' }}
-      </button>
+      </button> -->
+      <u-button
+      style="border-radius: 50rpx; border: 0; width: 80%"
+      @click="submit"
+        :loading="loading"
+        color="linear-gradient(to right, rgb(66, 83, 216), rgb(213, 51, 186))"
+        >{{ loading ? '登录中...' : '登录' }}</u-button
+      >
     </view>
 
     <view class="flex align-center justify-center pt-2 pb-4">
@@ -220,7 +250,7 @@ export default {
       if (
         (this.username === '' || this.password === '') &&
         (this.phone === '' || this.code === '') &&
-		(this.email === '' || this.code === '')
+        (this.email === '' || this.code === '')
       ) {
         return true
       }
@@ -286,35 +316,35 @@ export default {
       } else {
         // 验证手机号
         console.log('发送邮箱')
-		// 验证邮箱
-		if (!this.validateE()) return
-		// 请求数据-手机
-		this.$H
-		  .post(
-		    '/user/sendEmail',
-		    {
-		      email: this.email,
-		    },
-		    {
-		      native: true,
-		    }
-		  )
-		  .then((res) => {
-		    uni.showToast({
-		      title: res.data.data.msg,
-		      icon: 'none',
-		    })
-		    // 倒计时
-		    this.codeTime = 60
-		    let timer = setInterval(() => {
-		      if (this.codeTime >= 1) {
-		        this.codeTime--
-		      } else {
-		        this.codeTime = 0
-		        clearInterval(timer)
-		      }
-		    }, 1000)
-		  })
+        // 验证邮箱
+        if (!this.validateE()) return
+        // 请求数据-手机
+        this.$H
+          .post(
+            '/user/sendEmail',
+            {
+              email: this.email,
+            },
+            {
+              native: true,
+            }
+          )
+          .then((res) => {
+            uni.showToast({
+              title: res.data.data.msg,
+              icon: 'none',
+            })
+            // 倒计时
+            this.codeTime = 60
+            let timer = setInterval(() => {
+              if (this.codeTime >= 1) {
+                this.codeTime--
+              } else {
+                this.codeTime = 0
+                clearInterval(timer)
+              }
+            }, 1000)
+          })
       }
     },
     // 表单验证(手机)
@@ -330,10 +360,11 @@ export default {
       }
       // ...更多验证
       return true
-    },// 表单验证(邮箱)
+    }, // 表单验证(邮箱)
     validateE() {
       //邮箱正则
-      var mPattern = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,5}$/
+      var mPattern =
+        /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,5}$/
       if (!mPattern.test(this.email)) {
         uni.showToast({
           title: '邮箱格式不正确',
@@ -359,12 +390,12 @@ export default {
             code: this.code,
           }
         } else {
-			if (!this.validateE()) return
-			url = '/user/emailLogin'
-			data = {
-			  email: this.email,
-			  code_email: this.code,
-			}
+          if (!this.validateE()) return
+          url = '/user/emailLogin'
+          data = {
+            email: this.email,
+            code_email: this.code,
+          }
           console.log('邮箱登录')
         }
       } else {

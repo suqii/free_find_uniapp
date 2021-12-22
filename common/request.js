@@ -10,8 +10,8 @@ export default {
 	},
 	request(options = {}){
 		
-		// options.url = $C.webUrl+ '/api/v1' + options.url
-		options.url = $C.webUrl + options.url
+		options.url = $C.webUrl+ '/api/v1' + options.url
+		// options.url = $C.webUrl + options.url
 		options.method = options.method || this.common.method
 		options.header = options.header || this.common.header
 		
@@ -69,7 +69,8 @@ export default {
 		return this.request(options)
 	},
 	upload(url,options = {}){
-		options.url = $C.webUrl + url
+		// options.url = $C.webUrl + url
+		options.url = $C.webUrl + '/api/v1' +  url
 		options.header = options.header || {}
 		// 验证权限token
 		if(options.token){

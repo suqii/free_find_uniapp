@@ -6,6 +6,9 @@ Vue.prototype.$store = store
 
 Vue.config.productionTip = false
 
+import uView from 'uview-ui'
+Vue.use(uView)
+
 // 引入全局组件
 import divider from './components/common/divider.vue';
 Vue.component('divider',divider)

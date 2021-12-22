@@ -195,6 +195,7 @@ export default new Vuex.Store({
       // 连接
       state.SocketTask = uni.connectSocket({
         url: $C.websocketUrl,
+        url: $C.websocketUrl + '/wss',
         complete: () => {},
       })
       if (!state.SocketTask) return
